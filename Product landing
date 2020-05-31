@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<style>
+  body {
+    background-color: lightgreen;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'chelsea market';
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  a:visited {
+    color: blue;
+  }
+
+  p,
+  li {
+    font-family: monospace;
+  }
+
+  ul {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  #nav-bar {
+    display: flex;
+    width: 100%;
+    height: 7%;
+    border-bottom: lightgreen solid 2px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin-right: 3em;
+    background-image: linear-gradient(180deg, hotpink, lightgreen);
+    font-family: 'chelsea market';
+
+  }
+
+  .nav-link {
+    padding: 1em;
+    background-image: linear-gradient(180deg, hotpink, lightgreen);
+    max-height: 100%;
+  }
+
+  #header-img {
+    width: 75px;
+    z-index: 1;
+    position: fixed;
+    top: 5px;
+  }
+
+  #headline {
+    display: flexbox;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'chelsea market';
+  }
+
+  #plumbus-text {
+    width: 600px;
+  }
+
+  #whatis {
+    margin-top: 25px;
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  #where {
+    font-size: 15px;
+  }
+
+  #plumbus-stand {
+    display: block;
+    width: 300px;
+    border: lightgreen 1px solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px hotpink;
+  }
+
+  #images-float {
+    float: right;
+    justify-content: center;
+    width: 300px;
+    height: 480px;
+    right: 5px;
+    top: 5px;
+    font-size: small;
+  }
+
+
+
+  #features {
+    width: 860px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100px 300px 100px 300px;
+    grid-template-rows: 100px 100px 100px 100px;
+    font-size: 18px;
+    grid-gap: 20px;
+    font-family: 'chelsea market';
+  }
+
+  .featurepic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background: radial-gradient(hotpink, lightgreen, lightgreen);
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100px;
+    margin-top: 0px;
+  }
+
+  #featurepic1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  #feature1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  #featurepic2 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  #feature2 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+  }
+
+  #featurepic3 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  #feature3 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  #featurepic4 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+
+  #feature4 {
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+
+  #featurepic5 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  #feature5 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  #featurepic6 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+
+  #feature6 {
+    grid-row: 3/4;
+    grid-column: 4/5;
+  }
+
+  #featurepic7 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  #feature7 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+
+  #featurepic8 {
+    grid-row: 4/5;
+    grid-column: 3/4;
+  }
+
+  #feature8 {
+    grid-row: 4/5;
+    grid-column: 4/5;
+  }
+
+  #howtheydoit {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  #video {
+    border: lightgreen solid 1px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px hotpink;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+  }
+
+  #options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .options {
+    border: solid black 0px;
+    border-radius: 25px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 0px hotpink;
+  }
+
+  li {
+    text-align: initial;
+  }
+
+  .radiolabel {
+    border: 0px solid;
+    border-radius: 50%;
+    background-image: linear-gradient(black 100%, white 100%);
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .radiolabel:hover {
+    animation-name: eye;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes eye {
+    0% {
+      background-image: linear-gradient(black 100%, white 100%);
+    }
+
+    20% {
+      background-image: linear-gradient(black 80%, white 90%);
+    }
+
+    40% {
+      background-image: linear-gradient(black 60%, white 70%);
+    }
+
+    60% {
+      background-image: linear-gradient(black 40%, white 50%);
+    }
+
+    80% {
+      background-image: linear-gradient(black 20%, white 30%);
+    }
+
+    100% {
+      background-image: linear-gradient(black 10%, white 20%);
+    }
+  }
+
+  .radio {
+    opacity: 0;
+  }
+
+  .radio:hover {
+    animation-name: lense;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes lense {
+    0% {
+      opacity: 0;
+      scale: 1;
+    }
+
+    20% {
+      opacity: 0.2;
+      scale: 1.2;
+    }
+
+    40% {
+      opacity: 0.4;
+      scale: 1.4;
+    }
+
+    60% {
+      opacity: 0.6;
+      scale: 1.6;
+    }
+
+    80% {
+      opacity: 0.8;
+      scale: 1.8;
+    }
+
+    100% {
+      opacity: 1;
+      scale: 2;
+    }
+  }
+
+  #option1 {
+    background: linear-gradient(135deg, #cd7f32, 100px, lightgreen, lightgreen);
+  }
+
+  #option1:hover {
+    animation-name: formani1;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes formani1 {
+    0% {
+      background: linear-gradient(135deg, #cd7f32, 100px, lightgreen, lightgreen);
+    }
+
+    10% {
+      background: linear-gradient(135deg, #cd7f32, 115px, lightgreen, lightgreen);
+    }
+
+    20% {
+      background: linear-gradient(135deg, #cd7f32, 130px, lightgreen, lightgreen);
+    }
+
+    30% {
+      background: linear-gradient(135deg, #cd7f32, 145px, lightgreen, lightgreen);
+    }
+
+    40% {
+      background: linear-gradient(135deg, #cd7f32, 160px, lightgreen, lightgreen);
+    }
+
+    50% {
+      background: linear-gradient(135deg, #cd7f32, 175px, lightgreen, lightgreen);
+    }
+
+    60% {
+      background: linear-gradient(135deg, #cd7f32, 190px, lightgreen, lightgreen);
+    }
+
+    70% {
+      background: linear-gradient(135deg, #cd7f32, 205px, lightgreen, lightgreen);
+    }
+
+    80% {
+      background: linear-gradient(135deg, #cd7f32, 220px, lightgreen, lightgreen);
+    }
+
+    90% {
+      background: linear-gradient(135deg, #cd7f32, 235px, lightgreen, lightgreen);
+    }
+
+    100% {
+      background: linear-gradient(135deg, #cd7f32, 250px, lightgreen, lightgreen);
+      width: 300px;
+      font-size: 1.4em;
+      box-shadow: 0px 0px 20px 0px hotpink;
+    }
+  }
+
+  #option2 {
+    background: linear-gradient(135deg, silver, 100px, lightgreen, lightgreen)
+  }
+
+  #option2:hover {
+    animation-name: formani2;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes formani2 {
+    0% {
+      background: linear-gradient(135deg, silver, 100px, lightgreen, lightgreen);
+    }
+
+    10% {
+      background: linear-gradient(135deg, silver, 115px, lightgreen, lightgreen);
+    }
+
+    20% {
+      background: linear-gradient(135deg, silver, 130px, lightgreen, lightgreen);
+    }
+
+    30% {
+      background: linear-gradient(135deg, silver, 145px, lightgreen, lightgreen);
+    }
+
+    40% {
+      background: linear-gradient(135deg, silver, 160px, lightgreen, lightgreen);
+    }
+
+    50% {
+      background: linear-gradient(135deg, silver, 175px, lightgreen, lightgreen);
+    }
+
+    60% {
+      background: linear-gradient(135deg, silver, 190px, lightgreen, lightgreen);
+    }
+
+    70% {
+      background: linear-gradient(135deg, silver, 205px, lightgreen, lightgreen);
+    }
+
+    80% {
+      background: linear-gradient(135deg, silver, 220px, lightgreen, lightgreen);
+    }
+
+    90% {
+      background: linear-gradient(135deg, silver, 235px, lightgreen, lightgreen);
+    }
+
+    100% {
+      background: linear-gradient(135deg, silver, 250px, lightgreen, lightgreen);
+      width: 300px;
+      font-size: 1.4em;
+      box-shadow: 0px 0px 20px 0px hotpink;
+    }
+  }
+
+  #option3 {
+    background: linear-gradient(135deg, gold, 100px, lightgreen, lightgreen);
+  }
+
+  #option3:hover {
+    animation-name: formani3;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes formani3 {
+    0% {
+      background: linear-gradient(135deg, gold, 100px, lightgreen, lightgreen);
+    }
+
+    10% {
+      background: linear-gradient(135deg, gold, 115px, lightgreen, lightgreen);
+    }
+
+    20% {
+      background: linear-gradient(135deg, gold, 130px, lightgreen, lightgreen);
+    }
+
+    30% {
+      background: linear-gradient(135deg, gold, 145px, lightgreen, lightgreen);
+    }
+
+    40% {
+      background: linear-gradient(135deg, gold, 160px, lightgreen, lightgreen);
+    }
+
+    50% {
+      background: linear-gradient(135deg, gold, 175px, lightgreen, lightgreen);
+    }
+
+    60% {
+      background: linear-gradient(135deg, gold, 190px, lightgreen, lightgreen);
+    }
+
+    70% {
+      background: linear-gradient(135deg, gold, 205px, lightgreen, lightgreen);
+    }
+
+    80% {
+      background: linear-gradient(135deg, gold, 220px, lightgreen, lightgreen);
+    }
+
+    90% {
+      background: linear-gradient(135deg, gold, 235px, lightgreen, lightgreen);
+    }
+
+    100% {
+      background: linear-gradient(135deg, gold, 250px, lightgreen, lightgreen);
+      width: 300px;
+      font-size: 1.4em;
+      box-shadow: 0px 0px 20px 0px hotpink;
+    }
+  }
+
+  input[type=radio] {
+    cursor: pointer;
+  }
+</style>
+<html>
+
+<head>
+  <title>Plumbus</title>
+  <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <header id="header">
+    <img id="header-img" src="https://s12.directupload.net/images/200519/846oot76.png" alt="Plumbus" />
+    <nav id="nav-bar">
+      <a class="nav-link" id="navlink1" href="#whatis">About</a>
+      <a class="nav-link" id="navlink2" href="#where">Where to get</a>
+      <a class="nav-link" id="navlink3" href="#features">Features</a>
+      <a class="nav-link" id="navlink4" href="#howtheydoit">How they do it</a>
+    </nav>
+  </header>
+  <div id="headline">
+    <p>We are proud to present to you the one and only</p>
+    <img id="plumbus-text" src="https://s12.directupload.net/images/200520/4zwhbclc.png" alt="">
+  </div>
+  <div id="images-float">
+    <img id="plumbus-stand"
+      src="https://vignette.wikia.nocookie.net/rickandmorty/images/d/d1/Everybody_has_a_Plumbus.JPG/revision/latest?cb=20170926163022"
+      alt="Plumbus on counter" /> <br /></span>A regular old Plumbus in its fashionable stand.
+  </div>
+
+  <div id="whatis">
+    <h2>What is a Plumbus?</h2>
+    <p>
+      The Plubus is an all-purpose home devise.<br />
+      You already know how great the Plumbus is and what it does,<br />
+      so I dont even know why this paragraph exists.
+    </p>
+  </div>
+  <div id="where">
+    <h2>Where to get a Plumbus?</h2>
+    <p>
+      A Plumbus is present in every Household and used for everyday tasks,<br> if
+      you wish to get a second Plumbus for your home you can order it
+      <a href="#form">here</a>.
+    </p>
+  </div>
+  <h2>Features</h2>
+  <div id="features">
+    <div class="featurepic" id="featurepic1">
+      <img src="https://img.icons8.com/dotty/80/000000/dishwasher.png">
+    </div>
+    <p class="feature" id="feature1">Dishwasher safe!</p>
+    <div class="featurepic" id="featurepic2">
+      <img src="https://img.icons8.com/ios/80/000000/kitchen--v1.png">
+    </div>
+    <p class="feature" id="feature2"> Great with kitchens!</p>
+    <div class="featurepic" id="featurepic3">
+      <img src="https://img.icons8.com/ios/80/000000/glue.png">
+    </div>
+    <p class="feature" id="feature3">Can get sticky!</p>
+    <div class="featurepic" id="featurepic4">
+      <img src="https://img.icons8.com/ios/80/000000/give-gift.png">
+    </div>
+    <p class="feature" id="feature4">Will make it up to you!</p>
+    <div class="featurepic" id="featurepic5">
+      <img src="https://img.icons8.com/ios/80/000000/lifebuoy.png">
+    </div>
+    <p class="feature" id="feature5">Doubles as Gerbleflug in emergencies</p>
+    <div class="featurepic" id="featurepic6">
+      <img src="https://img.icons8.com/wired/80/000000/percentage.png">
+    </div>
+    <p class="feature" id="feature6">Now 30% more Plumbus!</p>
+    <div class="featurepic" id="featurepic7">
+      <img src="https://img.icons8.com/carbon-copy/80/000000/plus-math--v2.png">
+    </div>
+    <p class="feature" id="feature7">Can be compined with other items!</p>
+    <div class="featurepic" id="featurepic8">
+      <img src="https://img.icons8.com/dotty/80/000000/library.png">
+    </div>
+    <p class="feature" id="feature8">It knows!</p>
+  </div>
+  <div>
+    <h2>How They Do It?</h2>
+    <div id="howtheydoit">
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/eMJk4y9NGvE" frameborder="0"
+        allow="accelerometer; autoplƒay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+  <form action="https://www.freecodecamp.com/email-submit" id="form">
+    <div id="options">
+      <div class="options" id="option1">
+        <h3>Standard</h3>
+        <ul>
+          <li>Regular old Plumbus</li>
+          <li>Fashionable stand</li>
+          <li>Handling Creme</li>
+        </ul><br><br><br>
+        <label class="radiolabel" for="radio1">
+          <input class="radio" type="radio" id="radio1" name="options" value="1" checked>
+        </label>
+      </div>
+      <div class="options" id="option2">
+        <h3>Premium</h3>
+        <ul>
+          <li>Regular old Plumbus</li>
+          <li>Fashionable stand</li>
+          <li>Handling creme</li>
+          <li>Docking bay</li>
+          <li>Productive diaper</li>
+        </ul><br><br>
+        <label class="radiolabel" for="radio2">
+          <input class="radio" type="radio" id="radio2" name="options" value="2">
+        </label>
+      </div>
+      <div class="options" id="option3">
+        <h3>Premium</h3>
+        <ul>
+          <li>Regular old Plumbus</li>
+          <li>Fashionable stand</li>
+          <li>Handling creme</li>
+          <li>Docking bay</li>
+          <li>Productive diaper</li>
+          <li>Squiggle remote</li>
+          <li>Monogrammed warming tray*</li>
+        </ul>
+        <label class="radiolabel" for="radio3">
+          <input class="radio" type="radio" id="radio3" name="options" value="3">
+        </label>
+        <br><br>
+        <p style="font-size: 8px; ;">*Monogramm is completely random and not to be changed.</p>
+      </div>
+    </div>
+    <p id="order-request"> Please enter your email address, we will contact you to specify the terms of your order.</p>
+    <input type="email" id="email" name="email" placeholder="plumbus@example.rm" required>
+    <input type="submit" id="submit">
+  </form>
+  <footer>
+    <p>Author: Tobias Urban</p>
+    <a href="mailto:realtobias@gmx.de">Contact</a>
+    <ul>Sources</ul>
+    <li><a href="https://icons8.com/icon/55757/spülmaschine">Spülmaschine icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/1621/küche">Küche icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/2589/kleben">Kleben icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/45614/geschenk-überreichen">Geschenk überreichen icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/11657/rettungsring">Rettungsring icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/77070/prozent">Prozent icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/A-oQWMjgLD15/plus-mathe">Plus Mathe icon by Icons8</a></li>
+    <li><a href="https://icons8.com/icon/42402/bibliothek">Bibliothek icon by Icons8</a></li>
+  </footer>
+</body>
+
+</html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
